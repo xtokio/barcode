@@ -1,0 +1,19 @@
+name: barcode
+version: 0.1.0
+
+authors:
+  - your-name-here <your-email-here>
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+  kemal-session:
+    github: kemalcr/kemal-session
+
+targets:
+  barcode:
+    main: src/barcode.cr
+
+crystal: 0.32.1
+
+license: MIT

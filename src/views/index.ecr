@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode</title>
+    <link rel="stylesheet" href="/assets/barcode/css/style.css">
+</head>
+<body>
+    <br>
+    <div class="video-overlay"></div>
+    <video id="video" class="sqs-html5-video"></video>
+    <div class="text-copy">
+        <h1>Barcode Scan</h1>
+        <p>Warehouse item scanner</p>
+        <p class="controls">
+            <a class="button" id="startButton" data-status="start">
+                <img src="/assets/barcode/img/scan.svg">
+            </a>
+            
+            <br>
+            <pre><code id="result"></code></pre>
+            <p id="product"></p>
+        </p>
+      </div>
+
+    <script type="text/javascript" src="/assets/barcode/js/zxing.min.js"></script>
+    <script type="text/javascript" src="/assets/barcode/js/main.js"></script>
+</body>
+</html>
