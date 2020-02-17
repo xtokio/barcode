@@ -5,7 +5,7 @@ require "kemal-session"
 ROOT_PATH = "/Users/luis/Desktop/Code/Crystal/apps"
 # ROOT_PATH = "/var/www/domains/mischicanadas/subdomains/app"
 
-PUBLIC_PATH   = "#{ROOT_PATH}/warehouse/public"
+PUBLIC_PATH   = "#{ROOT_PATH}/barcode/public"
 PORT = 3026
 
 public_folder PUBLIC_PATH
@@ -39,7 +39,9 @@ module Barcode
                                 )
 
     response = request.body
-    {title: JSON.parse(response)["items"][0]["title"]}.to_json
+    puts response
+    {title: JSON.parse(response)["items"][0]["title"], image: JSON.parse(response)["items"][0]["images"][0] }.to_json
   end
 
 end
+Kemal.run(PORT)

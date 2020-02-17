@@ -26,11 +26,13 @@ window.addEventListener('load', function () {
                 {
                     console.log(result)
                     document.getElementById('result').textContent = result.text
-
-                    let response_data = await post("/barcode").catch(message => console.log(message));
+                    let upc = result.text;
+                    let params = {upc};
+                    let response_data = await post("/barcode",params).catch(message => console.log(message));
                     let data = await response_data.json();
                     console.log(data);
                     document.getElementById('product').textContent = data.title;
+                    document.getElementById('product_image').setAttribute("src",data.image);
                     
                 }
                 if (err && !(err instanceof ZXing.NotFoundException)) {
@@ -45,7 +47,9 @@ window.addEventListener('load', function () {
                 startButton.setAttribute('data-status','start');
 
                 codeReader.reset()
-                document.getElementById('result').textContent = '';
+                document.getElementById('result').textContent = "";
+                document.getElementById('product').textContent = "";
+                document.getElementById('product_image').setAttribute("src","http://dummyimage.com/250x155/");
                 console.log('Reset.')
             }
         })

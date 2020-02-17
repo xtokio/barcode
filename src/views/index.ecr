@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barcode</title>
-    <link rel="stylesheet" href="/assets/barcode/css/style.css">
+    <link rel="stylesheet" href="/barcode/assets/css/style.css">
 </head>
 <body>
     <br>
@@ -15,16 +15,17 @@
         <p>Warehouse item scanner</p>
         <p class="controls">
             <a class="button" id="startButton" data-status="start">
-                <img src="/assets/barcode/img/scan.svg">
+                <img src="/barcode/assets/img/scan.svg">
             </a>
             
             <br>
             <pre><code id="result"></code></pre>
             <p id="product"></p>
+            <img id="product_image" src="http://dummyimage.com/250x155/" style="height: 155px;"/>
         </p>
       </div>
 
-    <script type="text/javascript" src="/assets/barcode/js/zxing.min.js"></script>
-    <script type="text/javascript" src="/assets/barcode/js/main.js"></script>
+    <script type="text/javascript" src="/barcode/assets/js/zxing.min.js"></script>
+    <script type="text/javascript" src="/barcode/assets/js/main.js"></script>
 </body>
 </html>
